@@ -11,7 +11,7 @@ function App() {
     <>
    <Button 
       label={'hello'}
-      type={'primary '}
+      style={'primary '}
       border={'none'}
       onClickHandle={hello}
    
