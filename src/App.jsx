@@ -1,11 +1,21 @@
+import { info } from 'sass'
 import './App.css'
 import Button from './components/Buttons'
 
 
 function App() {
+  const hello = () =>{
+    console.log('clicked');
+  }
   return (
     <>
-   <Button label={'hello'}/>
+   <Button 
+      label={'hello'}
+      type={'primary '}
+      border={'none'}
+      onClickHandle={hello}
+   
+   />
     </>
   )
 }
