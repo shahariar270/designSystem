@@ -1,6 +1,7 @@
 import { info } from 'sass'
 import './App.css'
 import Button from './components/Buttons'
+import YouTube from 'react-youtube';
 
 
 function App() {
@@ -9,9 +10,9 @@ function App() {
   }
   return (
     <>
-      <p className="st-text-xl st-text-bold st-text-primary st-text-center">dsfa</p>
-      <span className="st-text-sm st-text-muted st-text-uppercase" >ji</span>
-      <h1 className="st-text-4xl st-text-bold st-text-tracking-wide">dsaf</h1>
+      <YouTube
+        videoId='2IFDMvfJJHc'
+      />
     </>
   )
 }
