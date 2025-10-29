@@ -2,6 +2,7 @@ import { info } from 'sass'
 import './App.css'
 import Button from './components/Buttons'
 import YouTube from 'react-youtube';
+import { DashData } from './practice/Dash';
 
 
 function App() {
@@ -10,9 +11,10 @@ function App() {
   }
   return (
     <>
-      <YouTube
+      {/* <YouTube
         videoId='2IFDMvfJJHc'
-      />
+      /> */}
+      <DashData/>
     </>
   )
 }
