@@ -1,0 +1,171 @@
+// Typography Scale
+$st-font-sizes: (
+  xs: 0.75rem,    // 12px
+  sm: 0.875rem,   // 14px
+  base: 1rem,     // 16px
+  lg: 1.125rem,   // 18px
+  xl: 1.25rem,    // 20px
+  '2xl': 1.5rem,  // 24px
+  '3xl': 1.875rem,// 30px
+  '4xl': 2.25rem, // 36px
+  '5xl': 3rem     // 48px
+) !default;
+
+// Font Weights
+$st-font-weights: (
+  thin: 100,
+  extralight: 200,
+  light: 300,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  black: 900
+) !default;
+
+// Line Heights
+$st-line-heights: (
+  none: 1,
+  tight: 1.25,
+  snug: 1.375,
+  normal: 1.5,
+  relaxed: 1.625,
+  loose: 2
+) !default;
+
+// Letter Spacing
+$st-letter-spacing: (
+  tighter: -0.05em,
+  tight: -0.025em,
+  normal: 0,
+  wide: 0.025em,
+  wider: 0.05em,
+  widest: 0.1em
+) !default;
+
+// Text Colors
+$st-text-colors: (
+  primary: #333,
+  secondary: #666,
+  muted: #888,
+  inverse: #fff,
+  success: #10b981,
+  warning: #f59e0b,
+  error: #ef4444,
+  info: #3b82f6
+) !default;
+
+// Base Typography Classes
+.st-text {
+  // Font Sizes
+  @each $size, $value in $st-font-sizes {
+    &-#{$size} {
+      font-size: $value;
+    }
+  }
+
+  // Font Weights
+  @each $weight, $value in $st-font-weights {
+    &-#{$weight} {
+      font-weight: $value;
+    }
+  }
+
+  // Line Heights
+  @each $height, $value in $st-line-heights {
+    &-leading-#{$height} {
+      line-height: $value;
+    }
+  }
+
+  // Letter Spacing
+  @each $spacing, $value in $st-letter-spacing {
+    &-tracking-#{$spacing} {
+      letter-spacing: $value;
+    }
+  }
+
+  // Text Colors
+  @each $color, $value in $st-text-colors {
+    &-#{$color} {
+      color: $value;
+    }
+  }
+}
+
+// Text Alignment
+.st-text {
+  &-left { text-align: left; }
+  &-center { text-align: center; }
+  &-right { text-align: right; }
+  &-justify { text-align: justify; }
+}
+
+// Text Transform
+.st-text {
+  &-uppercase { text-transform: uppercase; }
+  &-lowercase { text-transform: lowercase; }
+  &-capitalize { text-transform: capitalize; }
+  &-normal-case { text-transform: none; }
+}
+
+// Text Decoration
+.st-text {
+  &-underline { text-decoration: underline; }
+  &-line-through { text-decoration: line-through; }
+  &-no-underline { text-decoration: none; }
+}
+
+// Font Style
+.st-text {
+  &-italic { font-style: italic; }
+  &-not-italic { font-style: normal; }
+}
+
+// Whitespace & Wrapping
+.st-text {
+  &-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  &-break {
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  &-nowrap {
+    white-space: nowrap;
+  }
+  
+  &-pre {
+    white-space: pre;
+  }
+  
+  &-pre-line {
+    white-space: pre-line;
+  }
+  
+  &-pre-wrap {
+    white-space: pre-wrap;
+  }
+}
+
+// Responsive Text Classes (optional)
+@mixin st-responsive-text($breakpoint: '') {
+  $prefix: if($breakpoint == '', '', '-#{$breakpoint}');
+  
+  .st-text#{$prefix} {
+    &-left { text-align: left; }
+    &-center { text-align: center; }
+    &-right { text-align: right; }
+    
+    @each $size, $value in $st-font-sizes {
+      &-#{$size} {
+        font-size: $value;
+      }
+    }
+  }
+}

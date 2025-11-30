@@ -1,21 +1,20 @@
 import { info } from 'sass'
 import './App.css'
 import Button from './components/Buttons'
+import YouTube from 'react-youtube';
+import { DashData } from './practice/Dash';
 
 
 function App() {
-  const hello = () =>{
+  const hello = () => {
     console.log('clicked');
   }
   return (
     <>
-   <Button 
-      label={'hello'}
-      style={'primary '}
-      border={'none'}
-      onClickHandle={hello}
-   
-   />
+      {/* <YouTube
+        videoId='2IFDMvfJJHc'
+      /> */}
+      <DashData/>
     </>
   )
 }
