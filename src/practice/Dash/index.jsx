@@ -12,8 +12,6 @@ export const DashData = () => {
         setText('');
     }
 
-    console.log({ data });
-
     return (
         <>
             <form onSubmit={onsubmitHandler}>
