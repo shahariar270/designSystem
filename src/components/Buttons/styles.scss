@@ -1,7 +1,23 @@
+@mixin btn-slide($hover-color) {
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $hover-color;
+        transform: translateX(-100%);
+        transition: transform 0.4s ease;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        transform: translateX(0);
+    }
+}
+
 .btn {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     padding: 8px;
     border: none;
     border-radius: 4px;
@@ -16,37 +32,29 @@
         color: var(--text-white);
         z-index: 0;
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-color: var(--color-primary-hover);
-            transform: translateX(-100%);
-            transition: transform .4s ease;
-            z-index: -1;
-        }
-
-        &:hover::before {
-            transform: translateX(0);
-        }
+        @include btn-slide(var(--color-primary-hover));
     }
+
     &--secondary {
         background-color: var(--color-secondary);
         color: var(--text-primary);
         z-index: 0;
 
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-color: var(--color-secondary-hover);
-            transform: translateX(-100%);
-            transition: transform .4s ease;
-            z-index: -1;
-        }
+        @include btn-slide(var(--color-secondary-hover));
+    }
 
-        &:hover::before {
-            transform: translateX(0);
+    &--transparent {
+        background: transparent;
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        z-index: 0;
+
+        @include btn-slide(var(--color-primary));
+    }
+
+    &--no-animation {
+        &::before {
+            display: none;
         }
     }
 }
