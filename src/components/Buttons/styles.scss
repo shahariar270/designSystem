@@ -28,7 +28,7 @@
 
     //size variants
     &--sm {
-       padding: 6px 12px;
+        padding: 6px 12px;
     }
     &--md {
         padding: 8px 16px;
@@ -66,6 +66,24 @@
     &--no-animation {
         &::before {
             display: none;
+        }
+    }
+
+    //border variants
+    &__border {
+        &--primary {
+            border: 1px solid var(--color-primary);
+        }
+        &--focus {
+            border: 1px solid var(--border-focus);
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 0 2px var(--border-focus);
+            }
+        }
+        &--none {
+            border: none;
         }
     }
 }

@@ -11,7 +11,12 @@ const Button = ({
   size = 'md'
 }) => {
   return (
-    <button type={type} style={style} className={`btn btn--${border} btn--${variant} btn--${size}`} onClick={onclick}>
+    <button
+      type={type}
+      style={style}
+      className={`btn btn__border--${border} btn--${variant} btn--${size}`}
+      onClick={onclick}
+    >
       {label}
     </button>
   )
