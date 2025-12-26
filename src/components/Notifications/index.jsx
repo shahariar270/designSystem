@@ -1,0 +1,38 @@
+// NotificationContext.js
+import { createContext, useContext, useState } from 'react';
+
+const NotificationContext = createContext();
+
+export const useNotification = () => useContext(NotificationContext);
+
+export const NotificationProvider = ({ children }) => {
+    const [notifications, setNotifications] = useState([]);
+
+    const showNotification = ({ type = "info", message }) => {
+        const id = Date.now();
+
+        setNotifications((prev) => [...prev, { id, type, message }]);
+
+        setTimeout(() => {
+            removeNotification(id);
+        }, 3000);
+    };
+
+    const removeNotification = (id) => {
+        setNotifications((prev) => prev.filter((n) => n.id !== id));
+    };
+
+    return (
+        <NotificationContext.Provider value={{ showNotification }}>
+            {children}
+            <div className="notification-wrapper">
+                {notifications.map((n) => (
+                    <div key={n.id} className={`notification ${n.type}`}>
+                        <span>{n.message}</span>
+                        <button onClick={() => removeNotification(n.id)}>✕</button>
+                    </div>
+                ))}
+            </div>
+        </NotificationContext.Provider>
+    );
+};
