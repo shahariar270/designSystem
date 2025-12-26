@@ -1,1 +1,10 @@
+
+//common styles
 @import './common/typography';
+
+
+//components styles
+@import './Component/button';
+@import './Component/loading';
+@import './Component/notification';
+@import './Component/table';
