@@ -1,5 +1,5 @@
 // Typography Scale
-$st-font-sizes: (
+$font-sizes: (
   xs: 0.75rem,
   // 12px
   sm: 0.875rem,
@@ -20,7 +20,7 @@ $st-font-sizes: (
 ) !default;
 
 // Font Weights
-$st-font-weights: (
+$font-weights: (
   thin: 100,
   extralight: 200,
   light: 300,
@@ -33,7 +33,7 @@ $st-font-weights: (
 ) !default;
 
 // Line Heights
-$st-line-heights: (
+$line-heights: (
   none: 1,
   tight: 1.25,
   snug: 1.375,
@@ -43,7 +43,7 @@ $st-line-heights: (
 ) !default;
 
 // Letter Spacing
-$st-letter-spacing: (
+$letter-spacing: (
   tighter: -0.05em,
   tight: -0.025em,
   normal: 0,
@@ -53,7 +53,7 @@ $st-letter-spacing: (
 ) !default;
 
 // Text Colors
-$st-text-colors: (
+$text-colors: (
   primary: #333,
   secondary: #666,
   muted: #888,
@@ -64,46 +64,44 @@ $st-text-colors: (
   info: #3b82f6
 ) !default;
 
-// Base Typography Classes
-.st-text {
+// Base Text Utilities
+.text {
   // Font Sizes
-  @each $size, $value in $st-font-sizes {
+  @each $size, $value in $font-sizes {
     &-#{$size} {
       font-size: $value;
     }
   }
 
   // Font Weights
-  @each $weight, $value in $st-font-weights {
+  @each $weight, $value in $font-weights {
     &-#{$weight} {
       font-weight: $value;
     }
   }
 
   // Line Heights
-  @each $height, $value in $st-line-heights {
+  @each $height, $value in $line-heights {
     &-leading-#{$height} {
       line-height: $value;
     }
   }
 
   // Letter Spacing
-  @each $spacing, $value in $st-letter-spacing {
+  @each $spacing, $value in $letter-spacing {
     &-tracking-#{$spacing} {
       letter-spacing: $value;
     }
   }
 
   // Text Colors
-  @each $color, $value in $st-text-colors {
+  @each $color, $value in $text-colors {
     &-#{$color} {
       color: $value;
     }
   }
-}
 
-// Text Alignment
-.st-text {
+  // Alignment
   &-left {
     text-align: left;
   }
@@ -116,10 +114,8 @@ $st-text-colors: (
   &-justify {
     text-align: justify;
   }
-}
 
-// Text Transform
-.st-text {
+  // Transform
   &-uppercase {
     text-transform: uppercase;
   }
@@ -132,10 +128,8 @@ $st-text-colors: (
   &-normal-case {
     text-transform: none;
   }
-}
 
-// Text Decoration
-.st-text {
+  // Decoration
   &-underline {
     text-decoration: underline;
   }
@@ -145,20 +139,16 @@ $st-text-colors: (
   &-no-underline {
     text-decoration: none;
   }
-}
 
-// Font Style
-.st-text {
+  // Font Style
   &-italic {
     font-style: italic;
   }
   &-not-italic {
     font-style: normal;
   }
-}
 
-// Whitespace & Wrapping
-.st-text {
+  // Whitespace
   &-truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -173,90 +163,64 @@ $st-text-colors: (
   &-nowrap {
     white-space: nowrap;
   }
-
   &-pre {
     white-space: pre;
   }
-
   &-pre-line {
     white-space: pre-line;
   }
-
   &-pre-wrap {
     white-space: pre-wrap;
   }
 }
 
-// Responsive Text Classes (optional)
-@mixin st-responsive-text($breakpoint: "") {
-  $prefix: if($breakpoint == "", "", "-#{$breakpoint}");
-
-  .st-text#{$prefix} {
-    &-left {
-      text-align: left;
-    }
-    &-center {
-      text-align: center;
-    }
-    &-right {
-      text-align: right;
-    }
-
-    @each $size, $value in $st-font-sizes {
-      &-#{$size} {
-        font-size: $value;
-      }
-    }
-  }
+// Headings
+.h1 {
+  @extend .text-4xl;
+  @extend .text-bold;
+  @extend .text-leading-tight;
 }
 
-/* Headings */
-.st-h1 {
-  @extend .st-text-4xl;
-  @extend .st-text-bold;
-  @extend .st-text-leading-tight;
+.h2 {
+  @extend .text-3xl;
+  @extend .text-bold;
+  @extend .text-leading-tight;
 }
 
-.st-h2 {
-  @extend .st-text-3xl;
-  @extend .st-text-bold;
-  @extend .st-text-leading-tight;
+.h3 {
+  @extend .text-2xl;
+  @extend .text-bold;
+  @extend .text-leading-normal;
 }
 
-.st-h3 {
-  @extend .st-text-2xl;
-  @extend .st-text-bold;
-  @extend .st-text-leading-normal;
+.h4 {
+  @extend .text-xl;
+  @extend .text-medium;
+  @extend .text-leading-normal;
 }
 
-.st-h4 {
-  @extend .st-text-xl;
-  @extend .st-text-medium;
-  @extend .st-text-leading-normal;
+.h5 {
+  @extend .text-lg;
+  @extend .text-medium;
+  @extend .text-leading-normal;
 }
 
-.st-h5 {
-  @extend .st-text-lg;
-  @extend .st-text-medium;
-  @extend .st-text-leading-normal;
+.h6 {
+  @extend .text-base;
+  @extend .text-medium;
+  @extend .text-leading-normal;
 }
 
-.st-h6 {
-  @extend .st-text-base;
-  @extend .st-text-medium;
-  @extend .st-text-leading-normal;
+// Paragraph
+.p {
+  @extend .text-base;
+  @extend .text-normal;
+  @extend .text-leading-relaxed;
 }
 
-/* Paragraph */
-.st-p {
-  @extend .st-text-base;
-  @extend .st-text-regular;
-  @extend .st-text-leading-relaxed;
-}
-
-/* Span (inline text) */
-.st-span {
-  @extend .st-text-sm;
-  @extend .st-text-regular;
-  @extend .st-text-leading-normal;
+// Inline text
+.span {
+  @extend .text-sm;
+  @extend .text-normal;
+  @extend .text-leading-normal;
 }
