@@ -6,11 +6,12 @@ const Button = ({
   type = 'button',
   style = {},
   border = 'none',
-  onclick = () => { }
+  onclick = () => { },
+  variant = 'primary'
 }) => {
   return (
     <div>
-      <button type={type} className={`button-${style} button-border-${border}`} onClick={onclick}>
+      <button type={type} style={style} className={`btn btn--${border} btn--${variant}`} onClick={onclick}>
         {label}
       </button>
     </div>
