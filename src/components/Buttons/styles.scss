@@ -1,12 +1,24 @@
-.button-primary{
+.button-primary {
     background: blue;
     color: #fff;
     font-size: 20px;
     padding: 8px 12px;
 }
-.button-border-none{
+.button-border-none {
     border: none;
 }
-.button-border-info{
+.button-border-info {
     border: 1px solid green;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #3b82f6;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
 }
