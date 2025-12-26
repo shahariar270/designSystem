@@ -5,17 +5,17 @@ export const Modal = ({ isOpen, onClose, title, children }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="st-modal-overlay">
-            <div className="st-modal">
-                <div className="st-modal-header">
+        <div className="modal-overlay">
+            <div className="modal">
+                <div className="modal-header">
                     <h2>{title}</h2>
-                    <button className="st-modal-close" onClick={onClose}>&times;</button>
+                    <button className="modal-close" onClick={onClose}>&times;</button>
                 </div>
 
-                <div className="st-modal-content">{children}</div>
+                <div className="modal-content">{children}</div>
 
-                <div className="st-modal-footer">
-                    <button className="st-btn st-btn-close" onClick={onClose}>Close</button>
+                <div className="modal-footer">
+                    <button className=" btn  btn-close" onClick={onClose}>Close</button>
                 </div>
             </div>
         </div>
