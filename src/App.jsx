@@ -6,6 +6,7 @@ import { DashData } from './practice/Dash';
 import { useNotification } from './components/Notifications';
 import { useState } from 'react';
 import { Modal } from './components/Modal';
+import { Popover } from './components/Popover';
 
 
 function App() {
@@ -23,11 +24,21 @@ function App() {
       <DashData />
       <Button label="Click Me" onClickHandle={hello} />
       {open &&
+      <>
         <Modal
           isOpen={open}
           onClose={() => setOpen(false)}
           title="Modal Title"
-        />}
+        />
+      <Popover label="User Info">
+        <div>
+          <h4>John Doe</h4>
+          <p>Email: john@example.com</p>
+        </div>
+      </Popover>
+        </>
+        }
+
     </>
   )
 }
