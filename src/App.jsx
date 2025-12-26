@@ -24,20 +24,20 @@ function App() {
       <DashData />
       <Button label="Click Me" onClickHandle={hello} />
       {open &&
-      <>
-        <Modal
-          isOpen={open}
-          onClose={() => setOpen(false)}
-          title="Modal Title"
-        />
-      <Popover label="User Info">
+        <>
+          <Modal
+            isOpen={open}
+            onClose={() => setOpen(false)}
+            title="Modal Title"
+          />
+        </>
+      }
+      <Popover label={'rearer'}>
         <div>
           <h4>John Doe</h4>
           <p>Email: john@example.com</p>
         </div>
       </Popover>
-        </>
-        }
 
     </>
   )

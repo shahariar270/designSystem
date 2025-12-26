@@ -4,7 +4,7 @@ import './styles.scss';
 export const Popover = ({ label, children, hoverType = 'button' }) => {
     const [trigger, setTrigger] = useState(false);
     const Wrapper = hoverType === 'button' ? 'button' : 'div';
-
+    console.log(label);
     return (
         <div
             className='st-popover-container'
