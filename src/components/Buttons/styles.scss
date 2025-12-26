@@ -60,7 +60,7 @@
         border: 1px solid var(--color-primary);
         z-index: 0;
 
-        @include btn-slide(var(--color-primary));
+        // @include btn-slide(var(--color-primary));
     }
 
     &--no-animation {
