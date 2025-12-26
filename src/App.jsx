@@ -22,9 +22,7 @@ function App() {
         videoId='2IFDMvfJJHc'
       /> */}
       <DashData />
-      <Button label="Click Me" onClickHandle={hello} variant={'transparent'} border={'primary'} style={{
-        background:'red',
-      }} />
+      <Button label="Click Me" onClickHandle={hello} variant={'transparent'} border={'primary'}  />
       {open &&
         <>
           <Modal
