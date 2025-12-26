@@ -22,7 +22,7 @@ function App() {
         videoId='2IFDMvfJJHc'
       /> */}
       <DashData />
-      <Button label="Click Me" onClickHandle={hello} />
+      <Button label="Click Me" onClickHandle={hello} variant={'secondary'} />
       {open &&
         <>
           <Modal
