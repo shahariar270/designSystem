@@ -2,18 +2,17 @@ import React from 'react'
 import './styles.scss'
 
 const Button = ({
-label,
-type,
-style,
-border,
-onClickHandle,
+  label = 'click me',
+  type = 'button',
+  style = {},
+  border = 'none',
+  onclick = () => { }
 }) => {
-    console.log(type);
   return (
     <div>
-        <button className={`button-${style} button-border-${border}`} onClick={onClickHandle}>
+      <button type={type} className={`button-${style} button-border-${border}`} onClick={onclick}>
         {label}
-        </button>
+      </button>
     </div>
   )
 }
