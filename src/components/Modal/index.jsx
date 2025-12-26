@@ -13,10 +13,6 @@ export const Modal = ({ isOpen, onClose, title, children }) => {
                 </div>
 
                 <div className="modal-content">{children}</div>
-
-                <div className="modal-footer">
-                    <button className=" btn  btn-close" onClick={onClose}>Close</button>
-                </div>
             </div>
         </div>
     );

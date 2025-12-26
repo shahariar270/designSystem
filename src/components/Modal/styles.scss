@@ -43,37 +43,3 @@
     color: #000;
   }
 }
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.st-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  border: none;
-  font-weight: 500;
-  transition: background 0.2s;
-
-  &.st-btn-close {
-    background-color: #e5e7eb;
-    color: #111827;
-
-    &:hover {
-      background-color: #d1d5db;
-    }
-  }
-
-  &.st-btn-primary {
-    background-color: #3b82f6;
-    color: white;
-
-    &:hover {
-      background-color: #2563eb;
-    }
-  }
-}
