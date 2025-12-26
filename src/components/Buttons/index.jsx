@@ -10,11 +10,9 @@ const Button = ({
   variant = 'primary'
 }) => {
   return (
-    <div>
-      <button type={type} style={style} className={`btn btn--${border} btn--${variant}`} onClick={onclick}>
-        {label}
-      </button>
-    </div>
+    <button type={type} style={style} className={`btn btn--${border} btn--${variant}`} onClick={onclick}>
+      {label}
+    </button>
   )
 }
 
