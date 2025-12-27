@@ -9,6 +9,7 @@ import { Modal } from './components/Modal';
 import { Popover } from './components/Popover';
 import { Loading } from './components/Loading';
 import Tab from './components/Tab';
+import { Test } from './test';
 
 
 function App() {
@@ -37,7 +38,26 @@ function App() {
           <p>Email: john@example.com</p>
         </div>
       </Popover>
-      <Tab />
+      <Tab
+        label={'ad'}
+        content={<p>This is the content for the "ad" tab.</p>}
+      />
+      <Tab
+        tabs={[
+          {
+            label: 'aca',
+            content: 'sdmf'
+          },
+          {
+            label: 'sda',
+            content: 'asdasd'
+          },
+          {
+            label: 'asd',
+            content: <Test />
+          }
+        ]}
+      />
     </>
   )
 }

@@ -1,10 +1,9 @@
 import { useState } from "react";
 
-const Tab = () => {
+const Tab = ({
+    tabs = [],
+}) => {
     const [activeTab, setActiveTab] = useState(0);
-
-    const tabs = ["Home", "Profile", "Settings"];
-
     return (
         <>
             <div >
@@ -13,16 +12,13 @@ const Tab = () => {
                         key={index}
                         onClick={() => setActiveTab(index)}
                     >
-                        {tab}
+                        {tab?.label}
                     </button>
                 ))}
             </div>
 
-            {/* Tab Content */}
             <div>
-                {activeTab === 0 && <p>This is Home content</p>}
-                {activeTab === 1 && <p>This is Profile content</p>}
-                {activeTab === 2 && <p>This is Settings content</p>}
+                {tabs[activeTab]?.content}
             </div>
         </>
     );
