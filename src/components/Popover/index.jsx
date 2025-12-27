@@ -7,7 +7,7 @@ export const Popover = ({ label, children, hoverType = 'button' }) => {
     console.log(label);
     return (
         <div
-            className='st-popover-container'
+            className='popover-container'
             onMouseEnter={() => { setTrigger(true) }}
             onMouseLeave={() => setTrigger(false)}
         >
@@ -16,9 +16,9 @@ export const Popover = ({ label, children, hoverType = 'button' }) => {
             </Wrapper>
 
             {trigger && (
-                <div className="st-popover">
-                    <div className="st-popover-arrow"></div>
-                    <div className="st-popover-body">{children}</div>
+                <div className="popover">
+                    <div className="popover-arrow"></div>
+                    <div className="popover-body">{children}</div>
                 </div>
             )}
         </div>

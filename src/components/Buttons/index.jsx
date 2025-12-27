@@ -1,5 +1,4 @@
 import React from 'react'
-import './styles.scss'
 
 const Button = ({
   label = 'click me',
@@ -8,14 +7,16 @@ const Button = ({
   border = 'none',
   onclick = () => { },
   variant = 'primary',
-  size = 'md'
+  size = 'md',
+  disabled = false,
 }) => {
   return (
     <button
       type={type}
       style={style}
-      className={`btn btn__border--${border} btn--${variant} btn--${size}`}
+      className={`btn btn__border--${border} btn--${variant} btn--${size}` }
       onClick={onclick}
+      disabled={disabled}
     >
       {label}
     </button>
