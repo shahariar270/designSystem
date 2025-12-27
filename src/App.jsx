@@ -39,10 +39,6 @@ function App() {
         </div>
       </Popover>
       <Tab
-        label={'ad'}
-        content={<p>This is the content for the "ad" tab.</p>}
-      />
-      <Tab
         tabs={[
           {
             label: 'aca',

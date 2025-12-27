@@ -5,10 +5,11 @@ const Tab = ({
 }) => {
     const [activeTab, setActiveTab] = useState(0);
     return (
-        <>
-            <div >
+        <div className="tab-component">
+            <div className="tab-buttons">
                 {tabs.map((tab, index) => (
                     <button
+                        className={`tab-button ${activeTab === index ? 'active' : ''}`}
                         key={index}
                         onClick={() => setActiveTab(index)}
                     >
@@ -17,10 +18,10 @@ const Tab = ({
                 ))}
             </div>
 
-            <div>
+            <div className="tab-content">
                 {tabs[activeTab]?.content}
             </div>
-        </>
+        </div>
     );
 };
 
