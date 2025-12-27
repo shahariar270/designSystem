@@ -7,6 +7,7 @@ import { useNotification } from './components/Notifications';
 import { useState } from 'react';
 import { Modal } from './components/Modal';
 import { Popover } from './components/Popover';
+import { Loading } from './components/Loading';
 
 
 function App() {
@@ -22,14 +23,11 @@ function App() {
         videoId='2IFDMvfJJHc'
       /> */}
       <DashData />
-      <Button label="Click Me" onClickHandle={hello} variant={'transparent'} border={'primary'}  />
+      <Button label="Click Me" onclick={hello} variant={'transparent'} border={'primary'} />
       {open &&
         <>
-          <Modal
-            isOpen={open}
-            onClose={() => setOpen(false)}
-            title="Modal Title"
-          />
+         
+            <Loading />
         </>
       }
       <Popover label={'rearer'}>
