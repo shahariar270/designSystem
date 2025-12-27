@@ -39,16 +39,20 @@ function App() {
         </div>
       </Popover>
       <Tab
+        link={true}
         tabs={[
-          {
+          { 
+            key: 'aca',
             label: 'aca',
             content: 'sdmf'
           },
           {
             label: 'sda',
-            content: 'asdasd'
+            content: 'asdasd',
+            key: 'asda'
           },
           {
+            key: 'asd',
             label: 'asd',
             content: <Test />
           }
