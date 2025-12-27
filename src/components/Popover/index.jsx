@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import './styles.scss';
 
 export const Popover = ({ label, children, hoverType = 'button' }) => {
     const [trigger, setTrigger] = useState(false);

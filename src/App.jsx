@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { Modal } from './components/Modal';
 import { Popover } from './components/Popover';
 import { Loading } from './components/Loading';
+import Tab from './components/Tab';
 
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
       <Button label="Click Me" onclick={hello} variant={'transparent'} border={'primary'} />
       {open &&
         <>
-         
-            <Loading />
+
+          <Loading />
         </>
       }
       <Popover label={'rearer'}>
@@ -36,7 +37,7 @@ function App() {
           <p>Email: john@example.com</p>
         </div>
       </Popover>
-
+      <Tab />
     </>
   )
 }
