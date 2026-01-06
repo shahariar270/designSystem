@@ -10,6 +10,7 @@ import { Popover } from './components/Popover';
 import { Loading } from './components/Loading';
 import Tab from './components/Tab';
 import { Test } from './test';
+import Drawer from './components/drawer';
 
 
 function App() {
@@ -17,47 +18,23 @@ function App() {
   const [open, setOpen] = useState(false);
   const hello = () => {
     setOpen(true);
-    showNotification({ type: 'success', message: 'Open modal successfully' })
   }
   return (
     <>
       {/* <YouTube
         videoId='2IFDMvfJJHc'
       /> */}
-      <DashData />
-      <Button label="Click Me" onclick={hello} variant={'transparent'} border={'primary'} />
-      {open &&
-        <>
-
-          <Loading />
-        </>
-      }
-      <Popover label={'rearer'}>
-        <div>
-          <h4>John Doe</h4>
-          <p>Email: john@example.com</p>
-        </div>
-      </Popover>
-      <Tab
-        link={true}
-        tabs={[
-          { 
-            key: 'aca',
-            label: 'aca',
-            content: 'sdmf'
-          },
-          {
-            label: 'sda',
-            content: 'asdasd',
-            key: 'asda'
-          },
-          {
-            key: 'asd',
-            label: 'asd',
-            content: <Test />
-          }
-        ]}
+      <Button
+      onclick={hello}
+      label='rw'
       />
+      {open &&
+        <Drawer isOpen={open} onClose={() => setOpen(false)}>
+
+          <h1>jcfajsd nasdghf </h1>
+        </Drawer>
+
+      }
     </>
   )
 }
