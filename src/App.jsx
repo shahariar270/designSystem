@@ -11,6 +11,8 @@ import { Loading } from './components/Loading';
 import Tab from './components/Tab';
 import { Test } from './test';
 import Drawer from './components/drawer';
+import { Step } from './practice/Step';
+import { StepProvider } from './practice/Step/stepProvider';
 
 
 function App() {
@@ -25,9 +27,12 @@ function App() {
         videoId='2IFDMvfJJHc'
       /> */}
       <Button
-      onclick={hello}
-      label='rw'
+        onclick={hello}
+        label='rw'
       />
+      <StepProvider>
+        <Step />
+      </StepProvider>
       {open &&
         <Drawer isOpen={open} onClose={() => setOpen(false)}>
 

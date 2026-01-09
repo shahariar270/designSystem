@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react'
 import StepContext from './StepContext';
+import { Step } from '.';
 
-export const stepProvider = () => {
+export const StepProvider = ({children}) => {
     const [currentStep, setStep] = useState(1);
 
     const next = () => {
@@ -21,7 +22,7 @@ export const stepProvider = () => {
 
     return (
         <StepContext.Provider value={{ currentStep, next, prev }}>
-            
+            {children}
         </StepContext.Provider>
     )
 }
