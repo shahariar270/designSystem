@@ -13,6 +13,7 @@ import { Test } from './test';
 import Drawer from './components/drawer';
 import { Step } from './practice/Step';
 import { StepProvider } from './practice/Step/stepProvider';
+import StepIndicator from './practice/Step/StepIndicator';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         label='rw'
       />
       <StepProvider>
+        <StepIndicator/>
         <Step />
       </StepProvider>
       {open &&
