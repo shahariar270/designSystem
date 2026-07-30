@@ -38,6 +38,7 @@ export const NAV_GROUPS = [
       { label: "Pagination", path: "/components/pagination" },
       { label: "Tabs", path: "/components/tabs" },
       { label: "Breadcrumb", path: "/components/breadcrumb" },
+      { label: "Divider", path: "/components/divider" },
     ],
   },
   {

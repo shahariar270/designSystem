@@ -21,6 +21,7 @@ import TableDoc from "./pages/TableDoc";
 import PaginationDoc from "./pages/PaginationDoc";
 import TabsDoc from "./pages/TabsDoc";
 import BreadcrumbDoc from "./pages/BreadcrumbDoc";
+import DividerDoc from "./pages/DividerDoc";
 import LayoutDoc from "./pages/LayoutDoc";
 
 function DocsRoutes() {
@@ -45,6 +46,7 @@ function DocsRoutes() {
         <Route path="/components/pagination" element={<PaginationDoc />} />
         <Route path="/components/tabs" element={<TabsDoc />} />
         <Route path="/components/breadcrumb" element={<BreadcrumbDoc />} />
+        <Route path="/components/divider" element={<DividerDoc />} />
         <Route path="/components/layout" element={<LayoutDoc />} />
         <Route path="*" element={<Intro />} />
       </Routes>

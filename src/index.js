@@ -29,6 +29,7 @@ export { default as TableContainer } from "./components/Table/TableContainer";
 export { Pagination } from "./components/Pagination";
 export { default as Tab } from "./components/Tab";
 export { Breadcrumb } from "./components/Breadcrumb";
+export { Divider } from "./components/Divider";
 
 // layout shell
 export { Layout } from "./components/Layout";
