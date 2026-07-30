@@ -1,0 +1,107 @@
+.st-checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-sans);
+
+  &__row {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__input {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__box {
+    position: relative;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border-default);
+    background-color: var(--bg-surface);
+    transition: var(--transition-fast);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: var(--transition-fast);
+    }
+  }
+
+  &__label {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+  }
+
+  &__message {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  &__input:checked ~ &__box,
+  &__input:indeterminate ~ &__box {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  // checkmark
+  &__input:checked ~ &__box::after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid var(--text-white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  // indeterminate dash
+  &__input:indeterminate ~ &__box::after {
+    left: 3px;
+    top: 7px;
+    width: 10px;
+    height: 2px;
+    background-color: var(--text-white);
+  }
+
+  &__input:focus-visible ~ &__box {
+    box-shadow: var(--shadow-focus);
+  }
+
+  &--error &__box {
+    border-color: var(--color-error);
+  }
+
+  &--error &__message {
+    color: var(--color-error);
+  }
+
+  &--disabled {
+    opacity: 0.6;
+
+    .st-checkbox__row {
+      cursor: not-allowed;
+    }
+
+    .st-checkbox__input {
+      cursor: not-allowed;
+    }
+  }
+}

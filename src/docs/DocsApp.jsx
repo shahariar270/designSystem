@@ -7,6 +7,7 @@ import Theming from "./pages/Theming";
 import Demo from "./pages/Demo";
 import ButtonDoc from "./pages/ButtonDoc";
 import InputDoc from "./pages/InputDoc";
+import CheckboxDoc from "./pages/CheckboxDoc";
 import SelectDoc from "./pages/SelectDoc";
 import BadgeDoc from "./pages/BadgeDoc";
 import AvatarDoc from "./pages/AvatarDoc";
@@ -32,6 +33,7 @@ function DocsRoutes() {
         <Route path="/theming" element={<Theming />} />
         <Route path="/components/button" element={<ButtonDoc />} />
         <Route path="/components/input" element={<InputDoc />} />
+        <Route path="/components/checkbox" element={<CheckboxDoc />} />
         <Route path="/components/select" element={<SelectDoc />} />
         <Route path="/components/badge" element={<BadgeDoc />} />
         <Route path="/components/avatar" element={<AvatarDoc />} />

@@ -10,6 +10,7 @@ export { ThemeProvider, useTheme } from "./theme/ThemeProvider";
 // primitives
 export { default as Button } from "./components/Buttons";
 export { Input } from "./components/Input";
+export { Checkbox } from "./components/Checkbox";
 export { Select } from "./components/Select";
 export { Badge } from "./components/Badge";
 export { Avatar } from "./components/Avatar";
