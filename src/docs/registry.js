@@ -28,6 +28,7 @@ export const NAV_GROUPS = [
       { label: "Modal", path: "/components/modal" },
       { label: "Drawer", path: "/components/drawer" },
       { label: "Popover", path: "/components/popover" },
+      { label: "Tooltip", path: "/components/tooltip" },
       { label: "Toast", path: "/components/toast" },
       { label: "Loading", path: "/components/loading" },
       { label: "Skeleton", path: "/components/skeleton" },

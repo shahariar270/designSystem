@@ -16,6 +16,7 @@ import IconDoc from "./pages/IconDoc";
 import ModalDoc from "./pages/ModalDoc";
 import DrawerDoc from "./pages/DrawerDoc";
 import PopoverDoc from "./pages/PopoverDoc";
+import TooltipDoc from "./pages/TooltipDoc";
 import ToastDoc from "./pages/ToastDoc";
 import LoadingDoc from "./pages/LoadingDoc";
 import SkeletonDoc from "./pages/SkeletonDoc";
@@ -43,6 +44,7 @@ function DocsRoutes() {
         <Route path="/components/modal" element={<ModalDoc />} />
         <Route path="/components/drawer" element={<DrawerDoc />} />
         <Route path="/components/popover" element={<PopoverDoc />} />
+        <Route path="/components/tooltip" element={<TooltipDoc />} />
         <Route path="/components/toast" element={<ToastDoc />} />
         <Route path="/components/loading" element={<LoadingDoc />} />
         <Route path="/components/skeleton" element={<SkeletonDoc />} />

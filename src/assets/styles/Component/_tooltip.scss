@@ -1,0 +1,44 @@
+.st-tooltip {
+  position: relative;
+  display: inline-block;
+
+  &__bubble {
+    position: absolute;
+    z-index: var(--z-popover);
+    max-width: 220px;
+    width: max-content;
+    padding: 6px 10px;
+    background-color: var(--text-primary);
+    color: var(--bg-surface);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-medium);
+    pointer-events: none;
+  }
+
+  &__bubble--top {
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__bubble--bottom {
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__bubble--left {
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__bubble--right {
+    left: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
