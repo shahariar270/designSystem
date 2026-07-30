@@ -9,6 +9,7 @@ import ButtonDoc from "./pages/ButtonDoc";
 import InputDoc from "./pages/InputDoc";
 import SelectDoc from "./pages/SelectDoc";
 import BadgeDoc from "./pages/BadgeDoc";
+import AvatarDoc from "./pages/AvatarDoc";
 import IconDoc from "./pages/IconDoc";
 import ModalDoc from "./pages/ModalDoc";
 import DrawerDoc from "./pages/DrawerDoc";
@@ -32,6 +33,7 @@ function DocsRoutes() {
         <Route path="/components/input" element={<InputDoc />} />
         <Route path="/components/select" element={<SelectDoc />} />
         <Route path="/components/badge" element={<BadgeDoc />} />
+        <Route path="/components/avatar" element={<AvatarDoc />} />
         <Route path="/components/icon" element={<IconDoc />} />
         <Route path="/components/modal" element={<ModalDoc />} />
         <Route path="/components/drawer" element={<DrawerDoc />} />

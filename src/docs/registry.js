@@ -16,6 +16,7 @@ export const NAV_GROUPS = [
       { label: "Input", path: "/components/input" },
       { label: "Select", path: "/components/select" },
       { label: "Badge", path: "/components/badge" },
+      { label: "Avatar", path: "/components/avatar" },
       { label: "Icon", path: "/components/icon" },
     ],
   },
