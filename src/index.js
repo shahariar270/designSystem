@@ -10,14 +10,18 @@ export { ThemeProvider, useTheme } from "./theme/ThemeProvider";
 // primitives
 export { default as Button } from "./components/Buttons";
 export { Input } from "./components/Input";
+export { Checkbox } from "./components/Checkbox";
+export { Switch } from "./components/Switch";
 export { Select } from "./components/Select";
 export { Badge } from "./components/Badge";
+export { Avatar } from "./components/Avatar";
 export { Icon } from "./components/Icon";
 
 // overlays & feedback
 export { Modal } from "./components/Modal";
 export { default as Drawer } from "./components/drawer";
 export { Popover } from "./components/Popover";
+export { Tooltip } from "./components/Tooltip";
 export { Loading } from "./components/Loading";
 export { Skeleton } from "./components/Skeleton";
 export { NotificationProvider, useNotification } from "./components/Notifications";
@@ -28,6 +32,7 @@ export { default as TableContainer } from "./components/Table/TableContainer";
 export { Pagination } from "./components/Pagination";
 export { default as Tab } from "./components/Tab";
 export { Breadcrumb } from "./components/Breadcrumb";
+export { Divider } from "./components/Divider";
 
 // layout shell
 export { Layout } from "./components/Layout";

@@ -26,12 +26,27 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://vireo-kit.vercel.app/components/checkbox</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vireo-kit.vercel.app/components/switch</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://vireo-kit.vercel.app/components/select</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://vireo-kit.vercel.app/components/badge</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vireo-kit.vercel.app/components/avatar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -52,6 +67,11 @@
   </url>
   <url>
     <loc>https://vireo-kit.vercel.app/components/popover</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vireo-kit.vercel.app/components/tooltip</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -87,6 +107,11 @@
   </url>
   <url>
     <loc>https://vireo-kit.vercel.app/components/breadcrumb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://vireo-kit.vercel.app/components/divider</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

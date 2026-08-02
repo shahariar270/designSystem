@@ -14,8 +14,11 @@ export const NAV_GROUPS = [
     items: [
       { label: "Button", path: "/components/button" },
       { label: "Input", path: "/components/input" },
+      { label: "Checkbox", path: "/components/checkbox" },
+      { label: "Switch", path: "/components/switch" },
       { label: "Select", path: "/components/select" },
       { label: "Badge", path: "/components/badge" },
+      { label: "Avatar", path: "/components/avatar" },
       { label: "Icon", path: "/components/icon" },
     ],
   },
@@ -25,6 +28,7 @@ export const NAV_GROUPS = [
       { label: "Modal", path: "/components/modal" },
       { label: "Drawer", path: "/components/drawer" },
       { label: "Popover", path: "/components/popover" },
+      { label: "Tooltip", path: "/components/tooltip" },
       { label: "Toast", path: "/components/toast" },
       { label: "Loading", path: "/components/loading" },
       { label: "Skeleton", path: "/components/skeleton" },
@@ -37,6 +41,7 @@ export const NAV_GROUPS = [
       { label: "Pagination", path: "/components/pagination" },
       { label: "Tabs", path: "/components/tabs" },
       { label: "Breadcrumb", path: "/components/breadcrumb" },
+      { label: "Divider", path: "/components/divider" },
     ],
   },
   {

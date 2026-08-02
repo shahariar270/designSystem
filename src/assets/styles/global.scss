@@ -12,8 +12,11 @@
 // components
 @use './Component/button';
 @use './Component/input';
+@use './Component/checkbox';
+@use './Component/switch';
 @use './Component/select';
 @use './Component/badge';
+@use './Component/avatar';
 @use './Component/icon';
 @use './Component/loading';
 @use './Component/skeleton';
@@ -22,7 +25,9 @@
 @use './Component/pagination';
 @use './Component/modal';
 @use './Component/popovers';
+@use './Component/tooltip';
 @use './Component/tab';
 @use './Component/drawer';
 @use './Component/breadcrumb';
+@use './Component/divider';
 @use './Component/layout';

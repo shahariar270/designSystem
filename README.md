@@ -2,9 +2,10 @@
 
 > npm package name: `vireokit`
 
-A themeable **React + SCSS** component library — 17 components spanning primitives,
+A themeable **React + SCSS** component library — 22 components spanning primitives,
 overlays, data, and layout, all driven by CSS-variable design tokens with built-in
-light/dark theming.
+light/dark theming. Ships with `"use client"` boundaries on every interactive
+component, so it drops into a Next.js App Router project without extra wiring.
 
 - **Live docs:** https://vireo-kit.vercel.app/
 - **npm:** https://www.npmjs.com/package/vireokit
@@ -77,11 +78,20 @@ Re-brand by redefining tokens after the stylesheet import:
 
 | Group | Components |
 | --- | --- |
-| **Primitives** | `Button`, `Input`, `Select`, `Badge`, `Icon` |
-| **Overlays & feedback** | `Modal`, `Drawer`, `Popover`, `NotificationProvider` / `useNotification`, `Loading`, `Skeleton` |
-| **Data & navigation** | `Table`, `TableContainer`, `Pagination`, `Tab`, `Breadcrumb` |
+| **Primitives** | `Button`, `Input`, `Checkbox`, `Switch`, `Select`, `Badge`, `Avatar`, `Icon` |
+| **Overlays & feedback** | `Modal`, `Drawer`, `Popover`, `Tooltip`, `NotificationProvider` / `useNotification`, `Loading`, `Skeleton` |
+| **Data & navigation** | `Table`, `TableContainer`, `Pagination`, `Tab`, `Breadcrumb`, `Divider` |
 | **Layout** | `Layout`, `Sidebar`, `Topbar` |
 | **Theme** | `ThemeProvider`, `useTheme` |
+
+## Next.js
+
+Every component that uses hooks or attaches DOM event handlers (`Button`, `Input`,
+`Checkbox`, `Switch`, `Select`, `Modal`, `Drawer`, `Popover`, `Tooltip`, `Tab`,
+`Table`, `Pagination`, `NotificationProvider`, `Topbar`, `Sidebar`, `Avatar`) ships
+with a `"use client"` directive, so they work directly inside the App Router without
+you having to wrap them yourself. Purely presentational components (`Badge`, `Icon`,
+`Divider`, `Breadcrumb`, `Layout`, `Loading`, `Skeleton`) stay server-renderable.
 
 ## Documentation
 
