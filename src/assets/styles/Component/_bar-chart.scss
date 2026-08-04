@@ -1,0 +1,125 @@
+// BarChart — pure CSS/JSX vertical bar chart
+.st-barchart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-family: var(--font-sans);
+  width: 100%;
+
+  // ---- Legend ----
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-4);
+  }
+
+  &__legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  &__legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  // ---- Chart body ----
+  &__body {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-2);
+    width: 100%;
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border-default);
+    border-left: 1px solid var(--border-default);
+  }
+
+  // ---- Groups ----
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__bar-set {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    height: 100%;
+    width: 100%;
+  }
+
+  // ---- Bars ----
+  &__bar {
+    flex: 1;
+    max-width: 40px;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 4px;
+    cursor: default;
+    transition: filter var(--transition-fast), transform var(--transition-fast);
+    position: relative;
+
+    &:hover {
+      filter: brightness(1.08);
+      transform: scaleY(1.02);
+      transform-origin: bottom;
+    }
+  }
+
+  &__value {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--text-white);
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+  }
+
+  &__bar:hover &__value {
+    opacity: 1;
+  }
+
+  // ---- Labels ----
+  &__label {
+    font-size: 0.6875rem;
+    color: var(--text-secondary);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  // ---- Animated entrance ----
+  &--animated &__bar {
+    animation: bar-rise 0.5s var(--ease-standard) both;
+
+    @for $i from 1 through 20 {
+      &:nth-child(#{$i}) { animation-delay: #{($i - 1) * 0.04}s; }
+    }
+  }
+}
+
+@keyframes bar-rise {
+  from { transform: scaleY(0); transform-origin: bottom; }
+  to   { transform: scaleY(1); transform-origin: bottom; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-barchart--animated .st-barchart__bar { animation: none; }
+  .st-barchart__bar { transition: none; }
+}

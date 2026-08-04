@@ -31,3 +31,11 @@
 @use './Component/breadcrumb';
 @use './Component/divider';
 @use './Component/layout';
+
+// v0.2.0 — dashboard & data primitives
+@use './Component/stat-card';
+@use './Component/bar-chart';
+@use './Component/area-chart';
+@use './Component/progress-list';
+@use './Component/image-upload';
+@use './Component/image-fallback';
