@@ -26,6 +26,7 @@
 @use './Component/modal';
 @use './Component/popovers';
 @use './Component/tooltip';
+@use './Component/alert';
 @use './Component/tab';
 @use './Component/drawer';
 @use './Component/breadcrumb';
@@ -33,7 +34,6 @@
 @use './Component/layout';
 
 @use './Component/radio-group';
-
 // v0.2.0 — dashboard & data primitives
 @use './Component/stat-card';
 @use './Component/bar-chart';
