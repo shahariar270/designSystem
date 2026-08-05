@@ -43,6 +43,7 @@ export { Sidebar } from "./components/Sidebar";
 export { Topbar } from "./components/Topbar";
 
 // v0.2.0 — dashboard & data primitives
+export { Card } from "./components/Card";
 export { StatCard } from "./components/StatCard";
 export { BarChart } from "./components/BarChart";
 export { AreaChart } from "./components/AreaChart";
