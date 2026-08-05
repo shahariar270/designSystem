@@ -38,6 +38,10 @@
 @use './Component/dropdown-menu';
 @use './Component/empty-state';
 @use './Component/confirm-dialog';
+@use './Component/accordion';
+@use './Component/tag';
+@use './Component/progress';
+@use './Component/tier2-misc';
 // v0.2.0 — dashboard & data primitives
 @use './Component/stat-card';
 @use './Component/bar-chart';

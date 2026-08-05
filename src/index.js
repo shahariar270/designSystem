@@ -46,7 +46,7 @@ export { Topbar } from "./components/Topbar";
 export { Card } from "./components/Card";
 export { DropdownMenu } from "./components/DropdownMenu";
 export { EmptyState } from "./components/EmptyState";
-export { ConfirmDialog } from "./components/ConfirmDialog"; from "./components/Card";
+export { ConfirmDialog } from "./components/ConfirmDialog";
 export { StatCard } from "./components/StatCard";
 export { BarChart } from "./components/BarChart";
 export { AreaChart } from "./components/AreaChart";
@@ -54,3 +54,12 @@ export { ProgressList } from "./components/ProgressList";
 export { ImageUpload } from "./components/ImageUpload";
 export { ImageFallback } from "./components/ImageFallback";
 
+
+// v0.3.0 — basic development components
+export { Accordion } from "./components/Accordion";
+export { Tag } from "./components/Tag";
+export { Progress } from "./components/Progress";
+export { Stepper } from "./components/Stepper";
+export { NumberInput } from "./components/NumberInput";
+export { Typography } from "./components/Typography";
+export { Spinner } from "./components/Spinner";
