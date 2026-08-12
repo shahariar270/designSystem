@@ -1,7 +1,7 @@
 {
   "name": "vireokit",
   "description": "A themeable React + SCSS component library",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://vireo-kit.vercel.app",
   "repository": {
     "type": "git",
