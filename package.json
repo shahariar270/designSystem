@@ -1,7 +1,25 @@
 {
   "name": "vireokit",
   "description": "A themeable React + SCSS component library",
-  "version": "0.1.2",
+  "version": "0.2.0",
+  "homepage": "https://vireo-kit.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahariar270/VireoKit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahariar270/VireoKit/issues"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "design-system",
+    "scss",
+    "themeable",
+    "accessibility",
+    "vireokit",
+    "shahariar"
+  ],
   "type": "module",
   "publishConfig": {
     "access": "public"

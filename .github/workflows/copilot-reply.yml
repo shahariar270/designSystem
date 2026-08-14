@@ -1,0 +1,35 @@
+name: Reply to @copilot mentions
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit if not a PR comment
+        if: ${{ !github.event.issue.pull_request }}
+        run: |
+          echo "Not a PR comment; exiting"
+          exit 0
+
+      - name: Check for @copilot mention
+        shell: bash
+        run: |
+          if ! echo "${{ github.event.comment.body }}" | grep -qi "@copilot"; then
+            echo "No @copilot mention; exiting"
+            exit 0
+          fi
+
+      - name: Post reply
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Hi @${{ github.event.comment.user.login }}, thanks for mentioning @copilot — what would you like me to do with this PR? Reply with a command like "run tests", "assign reviewers", or "summarize".

@@ -1,0 +1,90 @@
+.st-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // ---- Variants ----
+  &--default  { box-shadow: var(--shadow-soft); border: 1px solid var(--border-muted); }
+  &--outlined { border: 1px solid var(--border-default); }
+  &--flat     { background: var(--bg-muted); }
+
+  // ---- Hoverable ----
+  &--hoverable {
+    transition: var(--transition-base);
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-medium);
+    }
+  }
+
+  // ---- Padding ----
+  &--pad-none {}
+  &--pad-sm   > .st-card__body, &--pad-sm > .st-card__header, &--pad-sm > .st-card__footer { padding: var(--space-3) var(--space-4); }
+  &--pad-md   > .st-card__body, &--pad-md > .st-card__header, &--pad-md > .st-card__footer { padding: var(--space-5) var(--space-6); }
+  &--pad-lg   > .st-card__body, &--pad-lg > .st-card__header, &--pad-lg > .st-card__footer { padding: var(--space-6) var(--space-8); }
+
+  // ---- Image ----
+  &__image {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  // ---- Header ----
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-5) var(--space-6);
+    border-bottom: 1px solid var(--border-muted);
+
+    &-text { flex: 1; min-width: 0; }
+    &-action { flex-shrink: 0; }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__subtitle {
+    margin: 2px 0 0;
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+  }
+
+  // ---- Body ----
+  &__body {
+    flex: 1;
+    padding: var(--space-5) var(--space-6);
+  }
+
+  // ---- Footer ----
+  &__footer {
+    padding: var(--space-4) var(--space-6);
+    border-top: 1px solid var(--border-muted);
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-card--hoverable { transition: none; &:hover { transform: none; } }
+}

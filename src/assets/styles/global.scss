@@ -26,8 +26,26 @@
 @use './Component/modal';
 @use './Component/popovers';
 @use './Component/tooltip';
+@use './Component/alert';
 @use './Component/tab';
 @use './Component/drawer';
 @use './Component/breadcrumb';
 @use './Component/divider';
 @use './Component/layout';
+
+@use './Component/radio-group';
+@use './Component/card';
+@use './Component/dropdown-menu';
+@use './Component/empty-state';
+@use './Component/confirm-dialog';
+@use './Component/accordion';
+@use './Component/tag';
+@use './Component/progress';
+@use './Component/tier2-misc';
+// v0.2.0 — dashboard & data primitives
+@use './Component/stat-card';
+@use './Component/bar-chart';
+@use './Component/area-chart';
+@use './Component/progress-list';
+@use './Component/image-upload';
+@use './Component/image-fallback';

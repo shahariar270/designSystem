@@ -11,6 +11,8 @@ export { ThemeProvider, useTheme } from "./theme/ThemeProvider";
 export { default as Button } from "./components/Buttons";
 export { Input } from "./components/Input";
 export { Checkbox } from "./components/Checkbox";
+export { RadioGroup } from "./components/RadioGroup";
+
 export { Switch } from "./components/Switch";
 export { Select } from "./components/Select";
 export { Badge } from "./components/Badge";
@@ -22,6 +24,7 @@ export { Modal } from "./components/Modal";
 export { default as Drawer } from "./components/drawer";
 export { Popover } from "./components/Popover";
 export { Tooltip } from "./components/Tooltip";
+export { Alert } from "./components/Alert";
 export { Loading } from "./components/Loading";
 export { Skeleton } from "./components/Skeleton";
 export { NotificationProvider, useNotification } from "./components/Notifications";
@@ -38,3 +41,25 @@ export { Divider } from "./components/Divider";
 export { Layout } from "./components/Layout";
 export { Sidebar } from "./components/Sidebar";
 export { Topbar } from "./components/Topbar";
+
+// v0.2.0 — dashboard & data primitives
+export { Card } from "./components/Card";
+export { DropdownMenu } from "./components/DropdownMenu";
+export { EmptyState } from "./components/EmptyState";
+export { ConfirmDialog } from "./components/ConfirmDialog";
+export { StatCard } from "./components/StatCard";
+export { BarChart } from "./components/BarChart";
+export { AreaChart } from "./components/AreaChart";
+export { ProgressList } from "./components/ProgressList";
+export { ImageUpload } from "./components/ImageUpload";
+export { ImageFallback } from "./components/ImageFallback";
+
+
+// v0.3.0 — basic development components
+export { Accordion } from "./components/Accordion";
+export { Tag } from "./components/Tag";
+export { Progress } from "./components/Progress";
+export { Stepper } from "./components/Stepper";
+export { NumberInput } from "./components/NumberInput";
+export { Typography } from "./components/Typography";
+export { Spinner } from "./components/Spinner";
